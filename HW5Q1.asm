@@ -23,7 +23,7 @@ main:
     la		$a0, line		# $a0 = line
     syscall
 
-    li		$t0, 23		# $t0 = 23
+    li		$t0, 24		# $t0 = 23
     jal		isOdd				# jump to isOdd and save position to $ra
     li		$v0, 4		# $v0 = 4
     syscall

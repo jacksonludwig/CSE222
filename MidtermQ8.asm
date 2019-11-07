@@ -9,8 +9,6 @@ initialize:
     
     sra     $t2, $t1, 1
     sll     $t2, $t2, 1
- 
-    beqz
 
     sw		$t1, myArray($t0)		# 
     addi	$t1, $t1, 1			# $t1 = $t1 + 1
@@ -40,9 +38,7 @@ initialized:
     li		$t2, 0		# $t2 = 0
     li		$t3, 0		# $t3 = 0
     li		$t4, 0		# $t4 = 0
-    jal		reverse				# jump to reverse and save position to $ra
     
-
     j		exit				# jump to exit
     
 
@@ -64,4 +60,6 @@ exit:
 .data
 myArray:    .space 48
 showSum:    .asciiz    "The sum is of all the values is: "
+
+
 

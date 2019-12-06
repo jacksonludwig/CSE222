@@ -40,7 +40,6 @@ initialized:
     li		$t4, 0		# $t4 = 0
     
     j		exit				# jump to exit
-    
 
 sumFunc:
     bge		$t0, 48, return	# if $t0 >= 48 then endSum

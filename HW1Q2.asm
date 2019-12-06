@@ -2,8 +2,8 @@
 .text
 
 main:
-    la		$a0, space		# 
-    
+    la		$a0, space		#
+
     lui     $t0, 0x1122     # load 0x11223344 to register $t0
     ori     $t0, $t0, 0x3344
 

@@ -1,3 +1,6 @@
+# Jackson Ludwig
+# CSE222 Final
+
 # always spaces (* 4):
 # 0,4
 # 6,7,8
@@ -15,7 +18,6 @@
 # e: 20, 25
 # f: 5, 10
 # g: 16, 17, 18
-
 
 .text
 main:

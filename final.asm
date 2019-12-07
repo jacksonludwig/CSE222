@@ -1,27 +1,55 @@
-#
-# ***
-#*   *
-#*   *
-# ***
-#*   *
-#*   *
-# ***
-#
-#*****
-#*****
-#*****
-#*****
-#*****
-#*****
-#*****
-#
+# always spaces (* 4):
+# 0,4
+# 6,7,8
+# 11,12,13
+# 15,19
+# 21,22,23
+# 26,27,28
+# 30,35
+
+# segments (* 4):
+# a: 1,2,3
+# b: 9, 14
+# c: 24, 29
+# d: 31, 32, 33
+# e: 20, 25
+# f: 5, 10
+# g: 16, 17, 18
+
 
 .text
 main:
     jal		initializeArray				# jump to initializeArray and save position to $ra
 
-    jal		printArray				# jump to printArray and save position to $ra
+menu:
+    la		$a0, menuTitle		# 
+    li		$v0, 4		# $v0 = 4
+    syscall
 
+    li		$v0, 5		# $v0 = 5
+    syscall
+    
+    beq		$v0, -1, exit	# if $v0 == -1 then exit
+    beq		$v0, 0, display0	# if $v0 == 0 then display0
+    beq		$v0, 1, display1	# if $v0 == 0 then display1
+    beq		$v0, 2, display2	# if $v0 == 0 then display2
+    beq		$v0, 3, display3	# if $v0 == 0 then display3
+    beq		$v0, 4, display4	# if $v0 == 0 then display4
+    beq		$v0, 5, display5	# if $v0 == 0 then display5
+    beq		$v0, 6, display6	# if $v0 == 0 then display6
+    beq		$v0, 7, display7	# if $v0 == 0 then display7
+    beq		$v0, 8, display8	# if $v0 == 0 then display8
+    beq		$v0, 9, display9	# if $v0 == 0 then display9
+    beq		$v0, 10, display10	# if $v0 == 0 then display10
+    beq		$v0, 11, display11	# if $v0 == 0 then display11
+    beq		$v0, 12, display12	# if $v0 == 0 then display12
+    beq		$v0, 13, display13	# if $v0 == 0 then display13
+    beq		$v0, 14, display14	# if $v0 == 0 then display14
+    beq		$v0, 15, display15	# if $v0 == 0 then display15
+
+    la		$a0, invalidInput		# 
+    li		$v0, 4		# $v0 = 4
+    syscall
 
     j exit
 
@@ -42,9 +70,17 @@ display0:
     jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
     jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
 
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
+
 display1:
     jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
     jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
+
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
 
 display2:
     jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
@@ -52,7 +88,11 @@ display2:
     jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
     jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
     jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
-    
+
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
+
 display3:
     jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
     jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
@@ -60,11 +100,19 @@ display3:
     jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
     jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
 
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
+
 display4:
     jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
     jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
     jal		enableSegmentF				# jump to enableSegmentF and save position to $ra    
     jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
 
 display5:
     jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
@@ -73,17 +121,30 @@ display5:
     jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
     jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
 
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
+
 display6:
+    jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
     jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
     jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
     jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
     jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
     jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
 
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
+
 display7:
     jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
     jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
     jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
+
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
 
 display8:
     jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
@@ -94,12 +155,20 @@ display8:
     jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
     jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
 
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
+
 display9:
     jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
     jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
     jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
     jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
     jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
 
 display10:
     jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
@@ -108,6 +177,10 @@ display10:
     jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
     jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
     jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
 
 display11:
     jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
@@ -118,11 +191,19 @@ display11:
     jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
     jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
 
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
+
 display12:
     jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
     jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
     jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
     jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
+
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
 
 display13:
     jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
@@ -132,6 +213,10 @@ display13:
     jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
     jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
 
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
+
 display14:
     jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
     jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
@@ -139,11 +224,19 @@ display14:
     jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
     jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
 
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
+
 display15:
     jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
     jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
     jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
     jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+
+    jal		printArray				# jump to printArray and save position to $ra
+    jal		initializeArray				# jump to initializeArray and save position to $ra
+    j		menu				# jump to menu
 
 printArray:
     beq		$t0, 140, reset	# 
@@ -266,3 +359,5 @@ exit:
 .data
 myArray: .space 140
 newLine: .asciiz "\n"
+menuTitle: .asciiz "Enter a value from 0-15 to display through the 7-segment decoder, or -1 to quit:\n"
+invalidInput:   .asciiz "\nInput must be an integer from 0 to 15 (inclusive), or -1 to quit. The program will now exit."

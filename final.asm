@@ -19,7 +19,6 @@
 .text
 main:
     jal		initializeArray				# jump to initializeArray and save position to $ra
-    
     jal		printArray				# jump to printArray and save position to $ra
 
 
@@ -28,7 +27,7 @@ main:
 initializeArray:
     beq		$t0, 140, reset	#
 
-    la		$t1, '*'		# 
+    la		$t1, ' '		# 
     sw		$t1, myArray($t0)		# 
     addi	$t0, $t0, 4			# $t0 = $t0 + 4
 
@@ -56,6 +55,8 @@ printNewLineForArray:
     li		$t2, 0		# $t2 = 0
     j		printArray				# jump to printArray
 
+
+
 reset:
     li		$t0, 0		# $t0 = 0
     li		$t1, 0		# $t1 = 0
@@ -63,7 +64,6 @@ reset:
     li		$t3, 0		# $t3 = 0
     li		$t4, 0		# $t4 = 0
     li		$t5, 0		# $t5 = 0
-    
     
     li		$a0, 0		# $a0 = 0
     li		$v0, 0		# $v0 = 0
@@ -77,4 +77,3 @@ exit:
 .data
 myArray: .space 140
 newLine: .asciiz "\n"
-space: .asciiz " "

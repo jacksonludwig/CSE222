@@ -34,6 +34,117 @@ initializeArray:
 
     j		initializeArray				# jump to initializeArray
 
+display0:
+    jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
+    jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
+    jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
+    jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
+    jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
+    jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
+
+display1:
+    jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
+    jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
+
+display2:
+    jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
+    jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
+    jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
+    jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
+    jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+    
+display3:
+    jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
+    jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
+    jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
+    jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
+    jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+
+display4:
+    jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
+    jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
+    jal		enableSegmentF				# jump to enableSegmentF and save position to $ra    
+    jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+
+display5:
+    jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
+    jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
+    jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
+    jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
+    jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+
+display6:
+    jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
+    jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
+    jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
+    jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
+    jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+
+display7:
+    jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
+    jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
+    jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
+
+display8:
+    jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
+    jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
+    jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
+    jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
+    jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
+    jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
+    jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+
+display9:
+    jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
+    jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
+    jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
+    jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
+    jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+
+display10:
+    jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
+    jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
+    jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
+    jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
+    jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
+    jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+
+display11:
+    jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
+    jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
+    jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
+    jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
+    jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
+    jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
+    jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+
+display12:
+    jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
+    jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
+    jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
+    jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
+
+display13:
+    jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
+    jal		enableSegmentB				# jump to enableSegmentB and save position to $ra
+    jal		enableSegmentC				# jump to enableSegmentC and save position to $ra
+    jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
+    jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
+    jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
+
+display14:
+    jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
+    jal		enableSegmentD				# jump to enableSegmentD and save position to $ra
+    jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
+    jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
+    jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+
+display15:
+    jal		enableSegmentA				# jump to enableSegmentA and save position to $ra
+    jal		enableSegmentE				# jump to enableSegmentE and save position to $ra
+    jal		enableSegmentF				# jump to enableSegmentF and save position to $ra
+    jal		enableSegmentG				# jump to enableSegmentG and save position to $ra
+
 printArray:
     beq		$t0, 140, reset	# 
 

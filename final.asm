@@ -19,6 +19,7 @@
 .text
 main:
     jal		initializeArray				# jump to initializeArray and save position to $ra
+
     jal		printArray				# jump to printArray and save position to $ra
 
 
@@ -55,7 +56,84 @@ printNewLineForArray:
     li		$t2, 0		# $t2 = 0
     j		printArray				# jump to printArray
 
+enableSegmentA:
+    la		$t1, '*'		# 
+    li		$t0, 4		# $t0 = 4 
+    sw		$t1, myArray($t0)		# 
+    
+    li		$t0, 8		# $t0 = 8 
+    sw		$t1, myArray($t0)		# 
 
+    li		$t0, 12		# $t0 = 12 
+    sw		$t1, myArray($t0)		# 
+
+    j		reset				# jump to reset
+    
+enableSegmentB:
+    la		$t1, '*'		# 
+    li		$t0, 36		# $t0 = 36 
+    sw		$t1, myArray($t0)		# 
+    
+    li		$t0, 56		# $t0 = 56 
+    sw		$t1, myArray($t0)		# 
+
+    j		reset				# jump to reset
+
+enableSegmentC:
+    la		$t1, '*'		# 
+    li		$t0, 96		# $t0 = 96 
+    sw		$t1, myArray($t0)		# 
+    
+    li		$t0, 116		# $t0 = 116
+    sw		$t1, myArray($t0)		# 
+
+    j		reset				# jump to reset
+
+enableSegmentD:
+    la		$t1, '*'		# 
+    li		$t0, 124		# $t0 = 124 
+    sw		$t1, myArray($t0)		# 
+    
+    li		$t0, 128		# $t0 = 128
+    sw		$t1, myArray($t0)		# 
+
+    li		$t0, 132		# $t0 = 132
+    sw		$t1, myArray($t0)		# 
+
+    j		reset				# jump to reset
+    
+enableSegmentE:
+    la		$t1, '*'		# 
+    li		$t0, 80 	# $t0 = 80
+    sw		$t1, myArray($t0)		# 
+    
+    li		$t0, 100		# $t0 = 100
+    sw		$t1, myArray($t0)		# 
+
+    j		reset				# jump to reset
+        
+enableSegmentF:
+    la		$t1, '*'		# 
+    li		$t0, 20		# $t0 = 20 
+    sw		$t1, myArray($t0)		# 
+    
+    li		$t0, 40		# $t0 = 40 
+    sw		$t1, myArray($t0)		# 
+
+    j		reset				# jump to reset
+
+enableSegmentG:
+    la		$t1, '*'		# 
+    li		$t0, 64		# $t0 = 64 
+    sw		$t1, myArray($t0)		# 
+    
+    li		$t0, 68		# $t0 = 68
+    sw		$t1, myArray($t0)		# 
+
+    li		$t0, 72		# $t0 = 72
+    sw		$t1, myArray($t0)		# 
+
+    j		reset				# jump to reset
 
 reset:
     li		$t0, 0		# $t0 = 0

@@ -33,21 +33,21 @@ menu:
     
     beq		$v0, -1, exit	# if $v0 == -1 then exit
     beq		$v0, 0, display0	# if $v0 == 0 then display0
-    beq		$v0, 1, display1	# if $v0 == 0 then display1
-    beq		$v0, 2, display2	# if $v0 == 0 then display2
-    beq		$v0, 3, display3	# if $v0 == 0 then display3
-    beq		$v0, 4, display4	# if $v0 == 0 then display4
-    beq		$v0, 5, display5	# if $v0 == 0 then display5
-    beq		$v0, 6, display6	# if $v0 == 0 then display6
-    beq		$v0, 7, display7	# if $v0 == 0 then display7
-    beq		$v0, 8, display8	# if $v0 == 0 then display8
-    beq		$v0, 9, display9	# if $v0 == 0 then display9
-    beq		$v0, 10, display10	# if $v0 == 0 then display10
-    beq		$v0, 11, display11	# if $v0 == 0 then display11
-    beq		$v0, 12, display12	# if $v0 == 0 then display12
-    beq		$v0, 13, display13	# if $v0 == 0 then display13
-    beq		$v0, 14, display14	# if $v0 == 0 then display14
-    beq		$v0, 15, display15	# if $v0 == 0 then display15
+    beq		$v0, 1, display1	# if $v0 == 1 then display1
+    beq		$v0, 2, display2	# if $v0 == 2 then display2
+    beq		$v0, 3, display3	# if $v0 == 3 then display3
+    beq		$v0, 4, display4	# if $v0 == 4 then display4
+    beq		$v0, 5, display5	# if $v0 == 5 then display5
+    beq		$v0, 6, display6	# if $v0 == 6 then display6
+    beq		$v0, 7, display7	# if $v0 == 7 then display7
+    beq		$v0, 8, display8	# if $v0 == 8 then display8
+    beq		$v0, 9, display9	# if $v0 == 9 then display9
+    beq		$v0, 10, display10	# if $v0 == 10 then display10
+    beq		$v0, 11, display11	# if $v0 == 11 then display11
+    beq		$v0, 12, display12	# if $v0 == 12 then display12
+    beq		$v0, 13, display13	# if $v0 == 13 then display13
+    beq		$v0, 14, display14	# if $v0 == 14 then display14
+    beq		$v0, 15, display15	# if $v0 == 15 then display15
 
     la		$a0, invalidInput		# 
     li		$v0, 4		# $v0 = 4

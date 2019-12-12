@@ -1,0 +1,2 @@
+-check textbook for more info on 7 segment decoder
+-check textbook for adder info
